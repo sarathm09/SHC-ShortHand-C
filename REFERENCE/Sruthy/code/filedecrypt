@@ -1,0 +1,26 @@
+filedecrypt(char *filename)
+{
+	FILE *in,*out;	
+	char Byte,newByte,newFile[];
+	int n,i=0;
+	sprintf(newFile,"encrypted_%s",filename);
+	in = fopen(filename,"rb");
+	out = fopen(newFile, "w");
+	if(in==NULL)
+		printf("Error: Can't Open inFile");
+	else if(outFile==NULL)
+		printf("Error: Can't open outFile.");
+	else{
+		while(1){
+		if(Byte!=EOF){
+		 	byte=fgetc(inFile);
+		 	newByte=Byte-25;
+			fputc(newByte,outFile);
+			}
+		else
+			break;
+		}
+	fclose(inFile);
+	fclose(outFile);
+	}
+}

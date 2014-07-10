@@ -1,0 +1,39 @@
+void matrixmult(int *m,int *n,int *p,int *q,int *c,int *d,int first[10][10],int second[10][10],int multiply[10][10])
+{
+int k,sum=0;
+int fr,fc,sr,sc,mr,mc;
+fr=*m;
+fc=*n;
+sr=*p;
+sc=*q;
+mr=*c;
+mc=*d;
+
+     if ( fc != sr )
+    printf("Matrices with entered orders can't be multiplied with each other.\n");
+    for ( mr = 0 ; mr < fr ; mr++ )
+    {
+      for ( mc = 0 ; mc < sc ; mc++ )
+      {
+        for ( k = 0 ; k < sr ; k++ )
+        {
+          sum = sum + first[mr][k]*second[k][mc];
+        }
+ 
+        multiply[mr][mc] = sum;
+        sum = 0;
+      }
+    }
+ 
+    printf("Product of entered matrices:-\n");
+ 
+    for ( mr = 0 ; mr < fr ; mr++ )
+    {
+      for ( mc = 0 ; mc < sc ; mc++ )
+        printf("%d\t", multiply[mr][mc]);
+ 
+      printf("\n");
+    }
+  return 0;
+}
+

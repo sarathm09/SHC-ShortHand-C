@@ -1,0 +1,27 @@
+void matrixtrans(int *m,int *n,int matrix[10][10],int transpose[10][10])
+{
+int i,j;
+int r,c;
+r=*m;
+c=*n;
+
+ 
+   for( i = 0 ; i < r ; i++ )
+   {
+      for( j = 0 ; j < c ; j++ )
+      {
+         transpose[j][i] = matrix[i][j];
+      }
+   }
+ 
+   printf("Transpose of entered matrix :-\n");
+ 
+   for( i = 0 ; i < c ; i++ )
+   {
+      for( j = 0 ; j < r ; j++ )
+      {
+         printf("%d\t",transpose[i][j]);
+      }  
+      printf("\n");
+   }
+ }

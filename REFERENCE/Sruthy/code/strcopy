@@ -1,0 +1,9 @@
+void strcopy(char *source,char *destination)
+{
+
+   strcpy(destination, source);
+ 
+   printf("\nSource string   : %s\n", source);
+   printf("Destination string: %s\n", destination);
+ 
+}

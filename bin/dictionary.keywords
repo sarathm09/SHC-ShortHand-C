@@ -1,0 +1,15 @@
+matrixadd
+matrixin
+matrixmult
+matrixtrans
+strcopy
+strencrypt
+strreplace
+strsearch
+strsort
+stringinfile
+filesort
+filencrypt
+filedecrypt
+analyse
+test

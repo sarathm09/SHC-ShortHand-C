@@ -1,0 +1,30 @@
+void filesort(char *fname,int order){
+int i=0,n=0,j=0;
+char s[100][100],*t;
+FILE *f1,*f2;
+f1=fopen(fname,"r");
+if(f1==NULL){
+	printf("FILE ERROR");
+	exit(0);
+	}
+else{
+	while(!feof(f1)){
+		fscanf("%s",s[n++]);
+	}
+	for(i=0;i<n;i++)
+		{
+		for(j=0;j<n-i;j++)
+			{
+			if(((strcmp(s[j-1],s[j])>0)&&order==1)||((strcmp(s[j-1],s[j])<0)&&order==0))
+				{
+				strcpy(t,s[j-1]);
+				strcpy(s[j-1],s[j]);
+				strcpy(s[j],t);
+				}
+			}
+		}
+	f2=fopen(fname,"w");
+	for(i=0;i<n;i++)
+		fprintf(f2,"%s\n",s[i]);
+	}
+}

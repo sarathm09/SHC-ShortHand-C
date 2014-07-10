@@ -1,0 +1,26 @@
+void encrypt(char password[],int key)
+{
+    unsigned int i;
+    for(i=0;i<strlen(password);++i)
+    {
+        password[i] = password[i] - key;
+    }
+}
+ 
+void decrypt(char password[],int key)
+{
+    unsigned int i;
+    for(i=0;i<strlen(password);++i)
+    {
+        password[i] = password[i] + key;
+    }
+}
+void strencrypt(char *password)
+{
+    printf("Password     	S= %s\n",password);
+    encrypt(password,0xFACA);
+    printf("Encrypted value = %s\n",password);
+    decrypt(password,0xFACA);
+    printf("Decrypted value = %s\n",password);
+    
+}

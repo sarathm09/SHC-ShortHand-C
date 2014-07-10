@@ -1,0 +1,9 @@
+
+#define test\
+	{\
+	printf("c = %d\n",c);\
+	printf("n = %d\n",n);\
+	printf("fact = %d\n",fact);\
+	printf("1 = %d\n",1);\
+	getch();\
+	}

@@ -1,0 +1,45 @@
+
+#define test\
+	{\
+	printf("ch = %d\n",ch);\
+	for(i=0;i<20;i++)\
+		printf("a[%d] = %d\n",i,a[i]);\
+	printf("5] = %d\n",5]);\
+	printf("x = %d\n",x);\
+	for(i=0;i<10;i++)\
+		printf("p[%d] = %d\n",i,p[i]);\
+	for(i=0;i<10;i++)\
+		printf("pt[%d] = %d\n",i,pt[i]);\
+	for(i=0;i<10;i++)\
+		printf("pp[%d] = %d\n",i,pp[i]);\
+	for(i=0;i<10;i++)\
+		printf("t[%d] = %d\n",i,t[i]);\
+	for(i=0;i<10;i++)\
+		printf("w[%d] = %d\n",i,w[i]);\
+	for(i=0;i<10;i++)\
+		printf("st[%d] = %d\n",i,st[i]);\
+	printf("a = %d\n",a);\
+	printf("0 = %d\n",0);\
+	for(i=0;i<10;i++)\
+		printf("bt[%d] = %d\n",i,bt[i]);\
+	for(i=0;i<10;i++)\
+		printf("wt[%d] = %d\n",i,wt[i]);\
+	for(i=0;i<10;i++)\
+		printf("tat[%d] = %d\n",i,tat[i]);\
+	printf("n = %d\n",n);\
+	printf("tq = %d\n",tq);\
+	printf("i = %d\n",i);\
+	printf("count = %d\n",count);\
+	printf("0 = %d\n",0);\
+	printf("swt = %d\n",swt);\
+	printf("0 = %d\n",0);\
+	printf("stat = %d\n",stat);\
+	printf("0 = %d\n",0);\
+	printf("temp = %d\n",temp);\
+	printf("sq = %d\n",sq);\
+	printf("0 = %d\n",0);\
+	printf("j = %d\n",j);\
+	printf("awt = %f\n",awt);\
+	printf("atat = %f\n",atat);\
+	getch();\
+	}

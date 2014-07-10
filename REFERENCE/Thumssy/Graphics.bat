@@ -1,0 +1,3 @@
+cd graphics_files
+dosbox
+exit

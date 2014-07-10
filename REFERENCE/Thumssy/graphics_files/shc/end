@@ -1,0 +1,76 @@
+
+void moverNclick(int x,int y,int c){
+	int i=totimg;
+	while(i>=0){
+		if(p[i].ptype==1){
+			if(x>p[i].x1&&x<p[i].x2){
+				if(y>p[i].y1&&y<p[i].y2){
+					p[i].mover=1;
+					if(c==1)
+						p[i].mclick=1;
+					}
+				}
+			}
+		else if(p[i].ptype==2){
+			if((pow((x-p[i].x1),2)-pow((y-p[i].y1),2))<=pow((p[i].r),2)){
+				p[i].mover=1;
+					if(c==1)
+						p[i].mclick=1;
+				}
+			}
+	i--;
+	}
+}
+
+void mouseposi(int *x,int *y,int *c){
+    union REGS in,out;
+    in.x.ax=01;
+    int86(0x33,&in,&out);
+    in.x.ax=03;
+    int86(0x33,&in,&out);
+    *x=out.x.cx;
+    *y=out.x.dx;
+    *c=out.x.bx;
+}
+
+void display(){
+	int i=totimg,j=0;
+	while(i>=0)
+		{
+		setcolor(p[i].border);
+		switch(p[i].ptype)
+		{
+			case 1:
+			 rectangle(p[i].x1,p[i].y1,p[i].x2,p[i].y2);
+			 break;
+			case 2:
+			 circle(p[i].x1,p[i].y1,p[i].r);
+			 break;
+			case 3:
+			 line(p[i].x1,p[i].y1,p[i].x2,p[i].y2);
+			 break;
+			case 4:
+			 for(j=p[i].start+1;j<p[i].stop;j++){
+				line(nf[j][0],nf[j][1],nf[j+1][0],nf[j+1][1]);
+			}
+			break;
+		}
+		i--;
+		}
+	setcolor(15);
+	}
+
+void main(){
+    int gd=DETECT,gm;
+	int x,y,c,i;
+    initgraph(&gd,&gm,"c:\\TurboC3\\BGI");
+	init();
+	while(!kbhit())
+		{
+		for(i=0;i<totimg;i++)
+			display();
+		mouseposi(&x,&y,&c);
+		moverNclick(x,y,c);
+		}
+    getch();
+}

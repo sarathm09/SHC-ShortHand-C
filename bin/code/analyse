@@ -1,0 +1,9 @@
+#define analyse\
+  {\
+  char* c_time_string;\
+  time_t current_time;\
+  current_time=time(NULL);\
+  c_time_string=ctime(&current_time);\
+  printf("\nTime : %s",c_time_string);\
+  getch();\
+  }\

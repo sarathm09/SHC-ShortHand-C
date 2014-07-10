@@ -1,0 +1,22 @@
+<project name=' q ' num_of_imgs=' 2 '>
+	<image>
+		<type> rectangle </type>
+		<typenum> 1 </typenum>
+		<id> r0 </id>
+		<border> 14 </border>
+		<cords>
+			<xy> ( 111,163 ) </xy>
+			<xy> ( 377,384 ) </xy>
+		</cords>
+	</image>
+	<image>
+		<type> circle </type>
+		<typenum> 2 </typenum>
+		<id> c0 </id>
+		<border> 14 </border>
+		<cords>
+			<xy> ( 480,237 ) </xy>
+			<r> ( 175 ) </r>
+		</cords>
+	</image>
+</project>
