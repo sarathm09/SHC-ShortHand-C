@@ -1,3 +1,7 @@
+/******************************************************************************************************/
+/*** The Python version (a much more efficient one) is under works outside this repo, stay tuned!!! ***/
+/******************************************************************************************************/
+
 Initial Release of SHC
 
 Top features:
